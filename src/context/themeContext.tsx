@@ -14,13 +14,19 @@ export const useTheme = () => useContext(ThemeContext)
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [isDark, setIsDark] = useState(() => {
-        const stored = localStorage.getItem("theme")
-        return stored ? JSON.parse(stored) === "dark" : false
+        try {
+            const stored = localStorage.getItem("theme")
+            if (!stored) return false
+            const parsed = stored.startsWith('"') ? JSON.parse(stored) : stored
+            return parsed === "dark"
+        } catch {
+            return false
+        }
     })
 
     useEffect(() => {
         document.querySelector("html")?.classList.toggle("dark", isDark)
-        localStorage.setItem("theme", JSON.stringify(isDark ? "dark" : "light"))
+        localStorage.setItem("theme", isDark ? "dark" : "light")
     }, [isDark])
 
     const toggleTheme = () => setIsDark(prev => !prev)
