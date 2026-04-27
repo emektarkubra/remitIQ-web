@@ -37,5 +37,8 @@
         "statusDone": "Completed",
         "statusProcessing": "Processing",
         "statusPending": "Pending"
+    },
+    "pageTitle": {
+        "dashboard": "Dashboard"
     }
 }

@@ -208,6 +208,10 @@ $bp-lg: 1024px;
             }
         }
 
+        .ant-list-item-meta-content {
+            text-align: left;
+        }
+
         &-name {
             font-size: 13.5px;
             color: $light-text-primary;
@@ -302,5 +306,9 @@ $bp-lg: 1024px;
     .ant-statistic-content-value {
         color: $light-text-primary;
         @apply dark:text-dark-text;
+    }
+
+    .ant-alert-message {
+        margin: 0px;
     }
 }

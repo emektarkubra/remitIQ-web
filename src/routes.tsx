@@ -2,11 +2,9 @@ import Dashboard from "./pages/dashboard";
 
 
 export const MENU_ROUTES = [
-
-    // Dashboard
     {
         path: "/",
-        title: 'Main title',
+        title: "dashboard",        // artık translation key
         element: <Dashboard />,
         requiredRoles: ['default-roles-myrealm'],
     }
