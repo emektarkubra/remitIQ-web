@@ -5,6 +5,11 @@
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
+    background-color: $light-bg-primary;
+
+    .dark & {
+        background-color: $bg-primary;
+    }
 }
 
 .app-inside-container {
@@ -15,8 +20,20 @@
     text-align: center;
     min-height: 120px;
     line-height: 120px;
+    background-color: $light-bg-primary;
+    padding: 24px;
+
+    .dark & {
+        background-color: $bg-primary;
+    }
 }
 
 .sidebar-container {
     background-color: $white;
+    border-right: 1px solid $light-border;
+
+    .dark & {
+        background-color: $bg-secondary;
+        border-right-color: $border;
+    }
 }

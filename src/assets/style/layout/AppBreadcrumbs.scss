@@ -4,13 +4,21 @@
     display: flex;
     justify-content: center !important;
     align-items: center !important;
-    color: $primary-color !important;
+    color: $blue !important;
+
+    .dark & {
+        color: $blue-text !important;
+    }
 
     a {
-        color: $light-gray1 !important;
+        color: $light-text-muted !important;
+
+        .dark & {
+            color: $text-muted !important;
+        }
 
         &:hover {
-            background-color: #ffffff00;
+            background-color: transparent;
         }
     }
 }
@@ -18,12 +26,20 @@
 .custom-breadcrumbs {
     li {
         display: flex;
-        color: $light-gray1 !important;
+        color: $light-text-muted !important;
+
+        .dark & {
+            color: $text-muted !important;
+        }
     }
 }
 
 .current-breadcrumb {
     a {
-        color: $primary-color !important;
+        color: $blue !important;
+
+        .dark & {
+            color: $blue-text !important;
+        }
     }
 }

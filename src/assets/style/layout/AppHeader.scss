@@ -12,25 +12,56 @@
         position: fixed;
         z-index: 2;
         width: 100%;
+
+        .dark & {
+            background-color: $bg-secondary;
+            box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.4);
+        }
     }
 
     .ant-btn-icon {
         display: flex;
         align-items: center;
-        color: $primary-color;
+        color: $blue;
+
+        .dark & {
+            color: $blue-text;
+        }
 
         .exit-icon {
-            color: $dark-gray !important;
+            color: $light-text-secondary!important;
+
+            .dark & {
+                color: $text-secondary !important;
+            }
         }
     }
 }
 
 .title-container {
     background-color: $white;
-    
-}   
+
+    .dark & {
+        background-color: $bg-secondary;
+    }
+}
 
 .page-title {
     text-align: start;
     padding: 15px 15px 0px 15px;
+    color: $light-text-primary !important;
+
+    .dark & {
+        color: $text-primary !important;
+    }
+}
+
+.page-title-divider {
+    border: none;
+    border-top: 1px solid rgba(89, 89, 89, 0.2);
+    margin: 8px 0 0 0;
+
+    .dark & {
+        border-top-color: $border-muted;
+    }
 }

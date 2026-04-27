@@ -1,9 +1,157 @@
-$primary-color : #1677ff;
-$light-primary-color : rgba(22, 119, 255, 0.067);
+// Dark Mode
 
-$dark-gray : #595959;
-$light-gray1 : #8c8c8c;
-$light-gray2 : #bfbfbf;
-$light-gray3 : #d9d9d9;
-$light-gray4 : #f0f0f0;
-$white: #fff;
+// Backgrounds
+$bg-primary: #0f1117; // ana sayfa arkaplanı
+$bg-secondary: #161b27; // sidebar, card
+$bg-tertiary: #1e2435; // hover, input, tag
+$bg-overlay: #252d40; // modal, dropdown
+
+// Borders
+$border: #2a3147;
+$border-muted: #1e2435;
+
+// Text
+$text-primary: #e8edf5;
+$text-secondary: #8b95a8;
+$text-muted: #5a6278;
+
+// Brand — Blue (Primary) 
+$blue: #1b4fd8;
+$blue-hover: #1640b8;
+$blue-light: #4d7ef5;
+$blue-bg: #1a2540;
+$blue-border: #1b4fd840;
+$blue-text: #6494f7;
+
+// Green (Success / Savings)
+$green: #0ea371;
+$green-hover: #0b8a5f;
+$green-light: #34c88a;
+$green-bg: #0d2620;
+$green-border: #0ea37140;
+$green-text: #3ed49a;
+
+// Red (Danger / Loss)
+$red: #e5484d;
+$red-hover: #cc3338;
+$red-bg: #2a1418;
+$red-border: #e5484d40;
+$red-text: #f27679;
+
+// Yellow (Warning / Pending)
+$yellow: #d97706;
+$yellow-hover: #b86305;
+$yellow-bg: #271e0a;
+$yellow-border: #d9770640;
+$yellow-text: #f5a623;
+
+// Purple (Pool / Special)
+$purple: #7c3aed;
+$purple-hover: #6829d4;
+$purple-bg: #1e1530;
+$purple-border: #7c3aed40;
+$purple-text: #a78bfa;
+
+// Teal (AI / Forecast)
+$teal: #0891b2;
+$teal-bg: #0a2030;
+$teal-border: #0891b240;
+$teal-text: #22d3ee;
+
+// Light Mode
+
+// Backgrounds
+$light-bg-primary: #f7f6f2;
+$light-bg-secondary: #ffffff;
+$light-bg-tertiary: #f0eee9;
+$light-bg-overlay: #ffffff;
+
+// Borders
+$light-border: #e4e1d8;
+$light-border-muted: #d4d0c4;
+
+// Text
+$light-text-primary: #1a1814;
+$light-text-secondary: #6b6760;
+$light-text-muted: #9e9a92;
+
+// Brand — Blue 
+$light-blue: #1b4fd8;
+$light-blue-hover: #1640b8;
+$light-blue-bg: #eef2ff;
+$light-blue-border: #c7d2fe;
+$light-blue-text: #1b4fd8;
+
+// Green 
+$light-green: #0ea371;
+$light-green-hover: #0b8a5f;
+$light-green-bg: #edfaf4;
+$light-green-border: #6ee7b7;
+$light-green-text: #065f46;
+
+// Red
+$light-red: #dc2626;
+$light-red-hover: #b91c1c;
+$light-red-bg: #fef2f2;
+$light-red-border: #fecaca;
+$light-red-text: #991b1b;
+
+// Yellow 
+$light-yellow: #d97706;
+$light-yellow-hover: #b86305;
+$light-yellow-bg: #fef3c7;
+$light-yellow-border: #fcd34d;
+$light-yellow-text: #92400e;
+
+// Purple
+$light-purple: #7c3aed;
+$light-purple-hover: #6829d4;
+$light-purple-bg: #f5f3ff;
+$light-purple-border: #ddd6fe;
+$light-purple-text: #5b21b6;
+
+// Teal
+$light-teal: #0891b2;
+$light-teal-bg: #ecfeff;
+$light-teal-border: #a5f3fc;
+$light-teal-text: #155e75;
+$white: #ffffff;
+
+
+// Dark tema varsayılan — light tema için override et
+$color-bg-page: $bg-primary;
+$color-bg-surface: $bg-secondary;
+$color-bg-elevated: $bg-tertiary;
+$color-bg-overlay: $bg-overlay;
+
+$color-border: $border;
+$color-border-muted: $border-muted;
+
+$color-text: $text-primary;
+$color-text-secondary: $text-secondary;
+$color-text-muted: $text-muted;
+
+$color-primary: $blue;
+$color-primary-hover: $blue-hover;
+$color-primary-bg: $blue-bg;
+$color-primary-border: $blue-border;
+$color-primary-text: $blue-text;
+
+$color-success: $green;
+$color-success-bg: $green-bg;
+$color-success-border: $green-border;
+$color-success-text: $green-text;
+
+$color-danger: $red;
+$color-danger-bg: $red-bg;
+$color-danger-border: $red-border;
+$color-danger-text: $red-text;
+
+$color-warning: $yellow;
+$color-warning-bg: $yellow-bg;
+$color-warning-border: $yellow-border;
+$color-warning-text: $yellow-text;
+
+$color-ai: $teal-text;
+$color-ai-bg: $teal-bg;
+$color-savings: $green-text;

@@ -50,47 +50,28 @@ export const createModifiedMenu = ({ userRoles }: any) => {
 
 export const MENU_ELEMENTS: MenuTypes[] = [
     {
-        key: '/dashboard',
+        key: '/',
         label: 'Dashboard',
         title: 'Dashboard',
         href: '',
-        icon: <Icon icon="mdi:home-outline" width='20px' />,
+        icon: <Icon icon="mdi:shield-outline" width='16px' />,
         roles: ['default-roles-myrealm'],
-        children: [
-            {
-                key: '/',
-                label: 'Main',
-                title: 'Main',
-                href: '/',
-                icon: <Icon icon="mdi:home-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-
-            },
-            {
-                key: '/analytics',
-                label: 'Analytics',
-                title: 'Analytics',
-                href: '/analytics',
-                icon: <Icon icon="mdi:view-dashboard-outline" width='16px' />,
-                // roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/trends',
-                label: 'Trends',
-                title: 'Trends',
-                href: '/trends',
-                icon: <Icon icon="mdi:chart-line" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/profile',
-                label: 'Profile',
-                title: 'Profile',
-                href: '/profile',
-                icon: <Icon icon="mdi:account-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-        ],
+    },
+    {
+        key: '/management',
+        label: 'Management',
+        title: 'Management',
+        href: '',
+        icon: <Icon icon="mdi:cog-outline" width='20px' />,
+        roles: ['default-roles-myrealm'],
+    },
+    {
+        key: '/reports',
+        label: 'Reports',
+        title: 'Reports',
+        href: '/reports',
+        icon: <Icon icon="mdi:alert-circle-outline" width='20px' />,
+        roles: ['default-roles-myrealm']
     },
     {
         key: '/security',
@@ -108,80 +89,6 @@ export const MENU_ELEMENTS: MenuTypes[] = [
                 icon: <Icon icon="mdi:shield-outline" width='16px' />,
                 roles: ['default-roles-myrealm'],
             },
-            {
-                key: '/access',
-                label: 'Access',
-                title: 'Access',
-                href: '/access',
-                icon: <Icon icon="mdi:lock-open-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/global-settings',
-                label: 'Global Settings',
-                title: 'Global Settings',
-                href: '/global-settings',
-                icon: <Icon icon="mdi:globe" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/antivirus',
-                label: 'Antivirus',
-                title: 'Antivirus',
-                href: '/antivirus',
-                icon: <Icon icon="mdi:antivirus-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
         ],
-    },
-    {
-        key: '/management',
-        label: 'Management',
-        title: 'Management',
-        href: '',
-        icon: <Icon icon="mdi:cog-outline" width='20px' />,
-        roles: ['default-roles-myrealm'],
-        children: [
-            {
-                key: '/tasks',
-                label: 'Tasks',
-                title: 'Tasks',
-                href: '/tasks',
-                icon: <Icon icon="mdi:cog-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/alerts',
-                label: 'Alerts',
-                title: 'Alerts',
-                href: '/alerts',
-                icon: <Icon icon="mdi:bell-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/search',
-                label: 'Search',
-                title: 'Search',
-                href: '/search',
-                icon: <Icon icon="mdi:magnify" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-            {
-                key: '/notifications',
-                label: 'Notifications',
-                title: 'Notifications',
-                href: '/notifications',
-                icon: <Icon icon="mdi:alert-circle-outline" width='16px' />,
-                roles: ['default-roles-myrealm']
-            },
-        ],
-    },
-    {
-        key: '/reports',
-        label: 'Reports',
-        title: 'Reports',
-        href: '/reports',
-        icon: <Icon icon="mdi:alert-circle-outline" width='20px' />,
-        roles: ['default-roles-myrealm']
     },
 ];

@@ -21,7 +21,7 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     useEffect(() => {
         const initializeKeycloak = () => {
             try {
-                keycloakInstance.init({ onLoad: 'login-required', checkLoginIframe: false, silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html' })
+                keycloakInstance.init({ onLoad: 'login-required', checkLoginIframe: false })
                     .then((auth) => {
                         console.log(auth)
                         setIsTokenExp(keycloakInstance.isTokenExpired());
