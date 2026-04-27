@@ -1,6 +1,44 @@
 {
-    "Languages" : {
-        "English" : "İngilizce",
-        "Turkish" : "Türkçe"
+    "Languages": {
+        "English": "İngilizce",
+        "Turkish": "Türkçe"
+    },
+    "dashboard": {
+        "aiLabel": "AI Tavsiyesi",
+        "aiMessage": "USD/TRY kuru önümüzdeki {{days}} günde %{{percent}} yükselme bekleniyor.",
+        "aiMessageStrong": "Bugün göndermek",
+        "aiMessageSuffix": "anne transferinizde yaklaşık {{currency}}{{amount}} tasarruf sağlar.",
+        "sendButton": "Gönder",
+        "sentThisMonth": "Bu Ay Gönderilen",
+        "totalSavings": "Toplam Tasarruf",
+        "activeTransfers": "Aktif Transferler",
+        "avgCommission": "Ortalama Komisyon",
+        "changeWithAi": "AI ile",
+        "changeInProgress": "İşlemde",
+        "chartTitle": "USD/TRY — 30 Günlük Kur & AI Tahmini",
+        "chartActual": "Gerçek",
+        "chartForecast": "AI Tahmini",
+        "chart1w": "1H",
+        "chart1m": "1A",
+        "chart3m": "3A",
+        "recentTransfersTitle": "Son Transferler",
+        "viewAll": "Tümü →",
+        "today": "Bugün",
+        "yesterday": "Dün",
+        "daysAgo": "gün önce",
+        "upcomingPaymentsTitle": "Yaklaşan Ödemeler",
+        "edit": "Düzenle →",
+        "purposeRent": "Kira",
+        "purposeSchool": "Okul",
+        "autoScheduled": "Otomatik planlandı",
+        "aiWillOptimize": "AI optimize edecek",
+        "aiSavingsEstimate": "AI tasarruf tahmini",
+        "daysLater": "gün sonra",
+        "statusDone": "Tamamlandı",
+        "statusProcessing": "İşlemde",
+        "statusPending": "Bekliyor"
+    },
+    "pageTitle": {
+        "dashboard": "Dashboard"
     }
 }

@@ -6,11 +6,14 @@ const sidebarSlice = createSlice({
     collapsed: false,
   },
   reducers: {
-    handleCollapsedMenu(state) {
-      state.collapsed = !state.collapsed;
+    handleCollapsedMenu: (state) => {
+      state.collapsed = !state.collapsed
     },
-  },
+    setCollapsed: (state, action) => {
+      state.collapsed = action.payload
+    },
+  }
 });
 
-export const { handleCollapsedMenu } = sidebarSlice.actions;
+export const { handleCollapsedMenu, setCollapsed } = sidebarSlice.actions;
 export default sidebarSlice.reducer;

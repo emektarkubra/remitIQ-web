@@ -1,6 +1,44 @@
 {
-    "Languages" : {
-        "English" : "English",
-        "Turkish" : "Turkish"
+    "Languages": {
+        "English": "English",
+        "Turkish": "Turkish"
+    },
+    "dashboard": {
+        "aiLabel": "AI Recommendation",
+        "aiMessage": "USD/TRY rate is expected to rise {{percent}}% in the next {{days}} days.",
+        "aiMessageStrong": "Sending today",
+        "aiMessageSuffix": "could save you approximately {{currency}}{{amount}} on your mother's transfer.",
+        "sendButton": "Send",
+        "sentThisMonth": "Sent This Month",
+        "totalSavings": "Total Savings",
+        "activeTransfers": "Active Transfers",
+        "avgCommission": "Average Commission",
+        "changeWithAi": "With AI",
+        "changeInProgress": "In Progress",
+        "chartTitle": "USD/TRY — 30-Day Rate & AI Forecast",
+        "chartActual": "Actual",
+        "chartForecast": "AI Forecast",
+        "chart1w": "1W",
+        "chart1m": "1M",
+        "chart3m": "3M",
+        "recentTransfersTitle": "Recent Transfers",
+        "viewAll": "View All →",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "daysAgo": "days ago",
+        "upcomingPaymentsTitle": "Upcoming Payments",
+        "edit": "Edit →",
+        "purposeRent": "Rent",
+        "purposeSchool": "School",
+        "autoScheduled": "Auto scheduled",
+        "aiWillOptimize": "AI will optimize",
+        "aiSavingsEstimate": "AI savings estimate",
+        "daysLater": "days later",
+        "statusDone": "Completed",
+        "statusProcessing": "Processing",
+        "statusPending": "Pending"
+    },
+    "pageTitle": {
+        "dashboard": "Dashboard"
     }
 }

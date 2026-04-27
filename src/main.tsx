@@ -7,7 +7,7 @@ import "./assets/style/custom.scss"
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './redux/store.tsx'
-import './i18n/i18n';
+import './i18n/i18n'
 import AuthProvider from './context/authContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
