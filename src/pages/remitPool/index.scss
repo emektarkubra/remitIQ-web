@@ -1,0 +1,355 @@
+@import '../../assets/style/variables';
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+.remitpool-page {
+    background: $light-bg-secondary;
+    border: 1px solid $light-border;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    @apply dark:bg-dark-bg-secondary dark:border-dark-border;
+
+    @media (max-width: $bp-sm) {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}
+
+.remitpool {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: $bp-sm) {
+        gap: 12px;
+    }
+
+    // ── AI Banner ──────────────────────────────────────────────────────────
+    &__ai-banner {
+        border-radius: 12px;
+        @apply dark:bg-blue-bg dark:border dark:border-blue-border;
+    }
+
+    &__ai-icon {
+        width: 34px;
+        height: 34px;
+        background: $blue;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    &__ai-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: $light-blue-text;
+        @apply dark:text-blue-text;
+    }
+
+    &__ai-message {
+        font-size: 13px;
+        color: $light-blue;
+        @apply dark:text-blue-light;
+    }
+
+    // ── Stats ──────────────────────────────────────────────────────────────
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $bp-sm) {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+    }
+
+    &__stat-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    }
+
+    &__stat-label {
+        font-size: 12px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__stat-value {
+        font-size: 24px;
+        font-weight: 700;
+        color: $light-text-primary;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-dark-text;
+
+        &--green {
+            color: $light-green;
+            @apply dark:text-green-text;
+        }
+    }
+
+    // ── Section Header ─────────────────────────────────────────────────────
+    &__section-header {
+        margin-bottom: -8px;
+    }
+
+    &__section-icon {
+        color: $blue;
+        @apply dark:text-blue-text;
+    }
+
+    &__section-title {
+        margin: 0 !important;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    // ── Pools Grid ─────────────────────────────────────────────────────────
+    &__pools-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $bp-sm) {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+
+    // ── Pool Card ──────────────────────────────────────────────────────────
+    &__pool-card {
+        border-radius: 12px;
+        border: 1.5px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        background: $light-bg-secondary;
+        transition: all 0.15s;
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: $blue;
+        }
+
+        &--joined {
+            border-color: $blue;
+            background: $light-blue-bg;
+            @apply dark:bg-blue-bg dark:border-blue;
+        }
+
+        .ant-card-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+    }
+
+    &__pool-corridor {
+        flex-wrap: wrap;
+    }
+
+    &__pool-flag {
+        font-size: 20px;
+    }
+
+    &__pool-currency {
+        font-size: 15px;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__pool-arrow {
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__joined-tag {
+        font-size: 10px !important;
+    }
+
+    // ── Progress ───────────────────────────────────────────────────────────
+    &__pool-progress {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__pool-progress-labels {
+        margin-bottom: 2px;
+    }
+
+    &__pool-collected {
+        font-size: 12px;
+        color: $light-text-primary;
+        font-weight: 500;
+        @apply dark:text-dark-text;
+    }
+
+    &__pool-target {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    // ── Meta ───────────────────────────────────────────────────────────────
+    &__pool-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    &__pool-meta-icon {
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__pool-meta-text {
+        font-size: 12px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__pool-closes {
+        font-size: 12px;
+        color: $yellow;
+        font-weight: 500;
+        margin-left: auto;
+        @apply dark:text-yellow-text;
+    }
+
+    // ── Pool Footer ────────────────────────────────────────────────────────
+    &__pool-footer {
+        padding-top: 12px;
+        border-top: 1px solid $light-border;
+        @apply dark:border-dark-border-muted;
+    }
+
+    &__pool-savings-label {
+        font-size: 11px;
+        color: $light-text-muted;
+        display: block;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__pool-savings-value {
+        font-size: 16px;
+        color: $light-green;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-green-text;
+    }
+
+    &__my-contribution-label {
+        font-size: 11px;
+        color: $light-text-muted;
+        display: block;
+        text-align: right;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__my-contribution-value {
+        font-size: 14px;
+        color: $blue;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-blue-text;
+    }
+
+    &__join-btn {
+        min-width: 80px;
+    }
+
+    // ── History Card ───────────────────────────────────────────────────────
+    &__history-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 20px;
+        }
+    }
+
+    &__history-header {
+        margin-bottom: 16px;
+    }
+
+    // ── Table ──────────────────────────────────────────────────────────────
+    &__table {
+        .ant-table {
+            background: transparent;
+            @apply dark:bg-transparent;
+        }
+
+        .ant-table-thead>tr>th {
+            background: $light-bg-tertiary;
+            font-size: 11px;
+            font-weight: 600;
+            color: $light-text-muted;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            @apply dark:bg-dark-bg-overlay dark:text-dark-text-muted;
+        }
+
+        .ant-table-tbody>tr>td {
+            border-bottom-color: $light-border;
+            @apply dark:border-dark-border-muted;
+        }
+
+        .ant-table-tbody>tr:hover>td {
+            background: $light-bg-tertiary;
+            @apply dark:bg-dark-bg-overlay;
+        }
+    }
+
+    &__table-corridor {
+        font-size: 13px;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__table-value {
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__table-savings {
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        color: $light-green;
+        @apply dark:text-green-text;
+    }
+
+    &__table-date {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+}

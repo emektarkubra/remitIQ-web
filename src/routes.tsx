@@ -1,6 +1,7 @@
-import Dashboard from "./pages/dashboard";
-import Transfer from "./pages/transfer";
-
+import Dashboard from "./pages/dashboard"
+import Transfer from "./pages/transfer"
+import Recipients from "./pages/recipients"
+import RemitPool from "./pages/remitPool"
 
 export const MENU_ROUTES = [
     {
@@ -11,29 +12,57 @@ export const MENU_ROUTES = [
     },
     {
         path: "/transfer",
-        title: "transfer",
+        title: "send",
         element: <Transfer />,
         requiredRoles: ['default-roles-myrealm'],
-    }
+    },
+    {
+        path: "/recipients",
+        title: "recipients",
+        element: <Recipients />,
+        requiredRoles: ['default-roles-myrealm'],
+    },
+    {
+        path: "/remitpool",
+        title: "remitPool",
+        element: <RemitPool />,
+        requiredRoles: ['default-roles-myrealm'],
+    },
+    {
+        path: "/advisor",
+        title: "advisor",
+        element: <div>AI Advisor</div>,
+        requiredRoles: ['default-roles-myrealm'],
+    },
+    {
+        path: "/history",
+        title: "history",
+        element: <div>Transfer History</div>,
+        requiredRoles: ['default-roles-myrealm'],
+    },
+    {
+        path: "/analytics",
+        title: "analytics",
+        element: <div>Analytics</div>,
+        requiredRoles: ['default-roles-myrealm'],
+    },
+    {
+        path: "/settings",
+        title: "settings",
+        element: <div>Settings</div>,
+        requiredRoles: ['default-roles-myrealm'],
+    },
 ]
 
 const getRoutesWithAuth = (userRoles: any) => {
     return MENU_ROUTES?.map(({ path, title, element, requiredRoles }) => {
         const hasAccess = requiredRoles?.some(role => userRoles?.includes(role))
-        console.log(requiredRoles)
-        console.log(hasAccess)
         if (hasAccess) {
-            return {
-                path,
-                title,
-                element,
-                requiredRoles
-            }
+            return { path, title, element, requiredRoles }
         } else {
             return null
         }
-
     })
 }
 
-export default getRoutesWithAuth;
+export default getRoutesWithAuth
