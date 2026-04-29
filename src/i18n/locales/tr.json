@@ -39,7 +39,8 @@
         "statusPending": "Bekliyor"
     },
     "pageTitle": {
-        "dashboard": "Dashboard"
+        "dashboard": "Dashboard",
+        "transfer": "Transfer"
     },
     "send": {
         "step1": "Miktar",
@@ -75,6 +76,17 @@
         "confirmWarning": "Onaylamadan önce tüm bilgileri kontrol edin. Gönderilen transferler geri alınamaz.",
         "successTitle": "Transfer Başlatıldı!",
         "successDesc": "Transferiniz iletildi. Tamamlandığında bildirim alacaksınız.",
-        "newTransfer": "Yeni Transfer"
+        "newTransfer": "Yeni Transfer",
+        "addRecipientTitle": "Yeni Alıcı Ekle",
+        "cancel": "İptal",
+        "saveRecipient": "Alıcıyı Kaydet",
+        "recipientName": "Ad Soyad",
+        "recipientCountry": "Ülke",
+        "recipientRelation": "Yakınlık",
+        "bankName": "Banka Adı",
+        "ibanLabel": "IBAN / Hesap Numarası",
+        "selectCountry": "Ülke seçin",
+        "selectRelation": "Yakınlık seçin",
+        "required": "Bu alan zorunludur"
     }
 }

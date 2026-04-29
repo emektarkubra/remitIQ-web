@@ -39,7 +39,8 @@
         "statusPending": "Pending"
     },
     "pageTitle": {
-        "dashboard": "Dashboard"
+        "dashboard": "Dashboard",
+        "transfer": "Transfer"
     },
     "send": {
         "step1": "Amount",
@@ -75,6 +76,17 @@
         "confirmWarning": "Please verify all details before confirming. Transfers cannot be reversed once sent.",
         "successTitle": "Transfer Initiated!",
         "successDesc": "Your transfer has been submitted. You will receive a notification when it is completed.",
-        "newTransfer": "New Transfer"
+        "newTransfer": "New Transfer",
+        "addRecipientTitle": "Add New Recipient",
+        "cancel": "Cancel",
+        "saveRecipient": "Save Recipient",
+        "recipientName": "Full Name",
+        "recipientCountry": "Country",
+        "recipientRelation": "Relation",
+        "bankName": "Bank Name",
+        "ibanLabel": "IBAN / Account Number",
+        "selectCountry": "Select country",
+        "selectRelation": "Select relation",
+        "required": "This field is required"
     }
 }
