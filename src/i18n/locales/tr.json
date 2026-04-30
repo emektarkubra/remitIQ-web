@@ -162,5 +162,27 @@
         "recommendations": "AI Önerileri",
         "chatTitle": "AI Asistan",
         "chatPlaceholder": "Kur, zamanlama veya tasarruf hakkında sor..."
+    },
+    "history": {
+        "title": "Transfer Geçmişi",
+        "totalTransfers": "transfer",
+        "export": "Dışa Aktar",
+        "totalSent": "Toplam Gönderim",
+        "totalSavings": "Toplam Tasarruf",
+        "completedCount": "Tamamlanan",
+        "avgAmount": "Ort. Tutar",
+        "searchPlaceholder": "Alıcı veya kanal ara...",
+        "filters": "Filtreler",
+        "clearFilters": "Temizle",
+        "results": "sonuç",
+        "date": "Tarih",
+        "recipient": "Alıcı",
+        "channel": "Kanal",
+        "sent": "Gönderilen",
+        "received": "Alınan",
+        "rate": "Kur",
+        "fee": "Ücret",
+        "savings": "Tasarruf",
+        "status": "Durum"
     }
 }

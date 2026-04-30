@@ -162,5 +162,27 @@
         "recommendations": "AI Recommendations",
         "chatTitle": "AI Assistant",
         "chatPlaceholder": "Ask about rates, timing or savings..."
+    },
+    "history": {
+        "title": "Transfer History",
+        "totalTransfers": "transfers",
+        "export": "Export",
+        "totalSent": "Total Sent",
+        "totalSavings": "Total Savings",
+        "completedCount": "Completed",
+        "avgAmount": "Avg. Amount",
+        "searchPlaceholder": "Search recipient or channel...",
+        "filters": "Filters",
+        "clearFilters": "Clear",
+        "results": "results",
+        "date": "Date",
+        "recipient": "Recipient",
+        "channel": "Channel",
+        "sent": "Sent",
+        "received": "Received",
+        "rate": "Rate",
+        "fee": "Fee",
+        "savings": "Savings",
+        "status": "Status"
     }
 }
