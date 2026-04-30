@@ -1,0 +1,310 @@
+@import '../../assets/style/variables';
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+.history-page {
+    background: $light-bg-secondary;
+    border: 1px solid $light-border;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    @apply dark:bg-dark-bg-secondary dark:border-dark-border;
+
+    @media (max-width: $bp-md) {
+        padding: 20px;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 14px;
+        border-radius: 12px;
+    }
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: $bp-sm) {
+        gap: 12px;
+    }
+
+    // ── Header ─────────────────────────────────────────────────────────────
+    &__header {
+        gap: 12px;
+    }
+
+    &__title {
+        margin: 0 !important;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__subtitle {
+        font-size: 13px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__export-btn {
+        @media (max-width: $bp-sm) {
+            font-size: 12px;
+        }
+    }
+
+    // ── Stats ──────────────────────────────────────────────────────────────
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $bp-sm) {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+    }
+
+    &__stat-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            @media (max-width: $bp-sm) {
+                padding: 12px 14px;
+            }
+        }
+    }
+
+    &__stat-label {
+        font-size: 12px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__stat-value {
+        font-size: 22px;
+        font-weight: 700;
+        color: $light-text-primary;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-dark-text;
+
+        @media (max-width: $bp-sm) {
+            font-size: 18px;
+        }
+
+        &--green {
+            color: $light-green;
+            @apply dark:text-green-text;
+        }
+    }
+
+    &__stat-icon {
+        &--up {
+            color: $blue;
+        }
+
+        &--green {
+            color: $light-green;
+            @apply dark:text-green-text;
+        }
+    }
+
+    // ── Filter Card ────────────────────────────────────────────────────────
+    &__filter-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 16px 20px;
+        }
+    }
+
+    &__search {
+        flex: 1;
+        min-width: 200px;
+        border-radius: 8px;
+        @apply dark:bg-dark-bg-overlay dark:border-dark-border dark:text-dark-text;
+
+        @media (max-width: $bp-sm) {
+            min-width: 100%;
+        }
+    }
+
+    &__search-icon {
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__filter-btn--active {
+        border-color: $blue !important;
+        color: $blue !important;
+    }
+
+    &__date-picker {
+        border-radius: 8px;
+        @apply dark:bg-dark-bg-overlay dark:border-dark-border;
+
+        @media (max-width: $bp-sm) {
+            width: 100%;
+        }
+    }
+
+    &__filter-row {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid $light-border;
+        @apply dark:border-dark-border-muted;
+    }
+
+    &__filter-select {
+        min-width: 160px;
+
+        @media (max-width: $bp-sm) {
+            min-width: 140px;
+        }
+    }
+
+    &__clear-btn {
+        padding: 0;
+    }
+
+    // ── Table Card ─────────────────────────────────────────────────────────
+    &__table-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 0;
+        }
+    }
+
+    &__table-header {
+        padding: 14px 20px;
+        border-bottom: 1px solid $light-border;
+        @apply dark:border-dark-border-muted;
+    }
+
+    &__table-count {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    // ── Table ──────────────────────────────────────────────────────────────
+    &__table {
+        .ant-table {
+            background: transparent;
+        }
+
+        .ant-table-thead>tr>th {
+            background: $light-bg-tertiary;
+            font-size: 11px;
+            font-weight: 600;
+            color: $light-text-muted;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            border-bottom-color: $light-border;
+            @apply dark:bg-dark-bg-overlay dark:text-dark-text-muted dark:border-dark-border;
+        }
+
+        .ant-table-tbody>tr>td {
+            border-bottom-color: $light-border;
+            vertical-align: middle;
+            @apply dark:border-dark-border-muted;
+        }
+
+        .ant-table-tbody>tr:hover>td {
+            background: $light-bg-tertiary;
+            @apply dark:bg-dark-bg-overlay;
+        }
+
+        .ant-table-tbody>tr:last-child>td {
+            border-bottom: none;
+        }
+
+        .ant-pagination {
+            padding: 12px 20px;
+            margin: 0 !important;
+            border-top: 1px solid $light-border;
+            @apply dark:border-dark-border-muted;
+        }
+    }
+
+    &__table-date {
+        font-size: 12px;
+        color: $light-text-muted;
+        white-space: nowrap;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__table-flag {
+        font-size: 16px;
+    }
+
+    &__table-recipient {
+        font-size: 13px;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__channel-tag {
+        font-size: 11px !important;
+        @apply dark:border-dark-border dark:text-dark-text-secondary;
+    }
+
+    &__table-amount {
+        font-size: 13.5px;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__table-received {
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__table-rate {
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__table-fee {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__table-savings {
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        color: $light-green;
+        @apply dark:text-green-text;
+    }
+
+    &__table-no-savings {
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+}

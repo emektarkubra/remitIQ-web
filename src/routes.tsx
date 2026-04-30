@@ -3,6 +3,7 @@ import Transfer from "./pages/transfer"
 import Recipients from "./pages/recipients"
 import RemitPool from "./pages/remitPool"
 import Advisor from "./pages/advisor"
+import History from "./pages/transferHistory"
 
 export const MENU_ROUTES = [
     {
@@ -38,7 +39,7 @@ export const MENU_ROUTES = [
     {
         path: "/history",
         title: "history",
-        element: <div>Transfer History</div>,
+        element: <History />,
         requiredRoles: ['default-roles-myrealm'],
     },
     {
