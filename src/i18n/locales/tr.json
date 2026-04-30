@@ -144,5 +144,23 @@
         "savings": "Tasarruf",
         "status": "Durum",
         "date": "Tarih"
+    },
+    "advisor": {
+        "rateStatus": "Kur Durumu",
+        "rateMiddle": "Orta Seviye",
+        "rateDesc": "2 gün içinde iyileşme bekleniyor.",
+        "monthlySaving": "Bu Ay Tasarruf",
+        "aiOptimized": "AI optimizasyonu ile elde edildi",
+        "goalProgress": "Hedef",
+        "modelAccuracy": "Model Doğruluğu",
+        "last30Days": "Son 30 günlük tahmin isabet oranı",
+        "forecastTitle": "14 Günlük USD/TRY Tahmini",
+        "goodDay": "İyi gün",
+        "neutralDay": "Orta",
+        "badDay": "Kötü gün",
+        "today": "Bugün",
+        "recommendations": "AI Önerileri",
+        "chatTitle": "AI Asistan",
+        "chatPlaceholder": "Kur, zamanlama veya tasarruf hakkında sor..."
     }
 }

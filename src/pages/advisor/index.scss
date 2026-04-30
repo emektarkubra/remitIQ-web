@@ -1,0 +1,644 @@
+@import '../../assets/style/variables';
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+.advisor-page {
+    background: $light-bg-secondary;
+    border: 1px solid $light-border;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    @apply dark:bg-dark-bg-secondary dark:border-dark-border;
+
+    @media (max-width: $bp-md) {
+        padding: 20px;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 14px;
+        border-radius: 12px;
+    }
+}
+
+.advisor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: $bp-sm) {
+        gap: 12px;
+    }
+
+    // ── Common ─────────────────────────────────────────────────────────────
+    &__icon {
+        color: $blue;
+        @apply dark:text-blue-text;
+    }
+
+    &__card-title {
+        margin: 0 !important;
+        color: $light-text-primary;
+        font-size: 14px !important;
+        @apply dark:text-dark-text;
+
+        @media (max-width: $bp-sm) {
+            font-size: 13px !important;
+        }
+    }
+
+    &__chart-header {
+        margin-bottom: 16px;
+    }
+
+    // ── Stats Row ──────────────────────────────────────────────────────────
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $bp-md) {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: $bp-sm) {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+    }
+
+    &__stat-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px 16px;
+            }
+        }
+    }
+
+    &__stat-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+
+        @media (max-width: $bp-sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__stat-desc {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+
+        @media (max-width: $bp-sm) {
+            font-size: 11px;
+        }
+    }
+
+    &__stat-big-value {
+        font-size: 30px;
+        font-weight: 700;
+        color: $light-text-primary;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-dark-text;
+
+        @media (max-width: $bp-sm) {
+            font-size: 24px;
+        }
+
+        &--green {
+            color: $light-green;
+            @apply dark:text-green-text;
+        }
+    }
+
+    &__stat-progress-label {
+        font-size: 11px;
+        color: $light-text-muted;
+        margin-top: 4px;
+        @apply dark:text-dark-text-muted;
+    }
+
+    // ── Score Ring ─────────────────────────────────────────────────────────
+    &__score-ring {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: conic-gradient($light-green 0deg 252deg, $light-bg-tertiary 252deg 360deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        @media (max-width: $bp-sm) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__score-inner {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: $light-bg-secondary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @apply dark:bg-dark-bg-tertiary;
+
+        @media (max-width: $bp-sm) {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &__score-val {
+        font-size: 18px;
+        font-weight: 700;
+        color: $light-text-primary;
+        line-height: 1;
+        @apply dark:text-dark-text;
+
+        @media (max-width: $bp-sm) {
+            font-size: 15px;
+        }
+    }
+
+    &__score-label {
+        font-size: 9px;
+        color: $light-text-muted;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        @apply dark:text-dark-text-muted;
+    }
+
+    // ── Accuracy Bars ──────────────────────────────────────────────────────
+    &__accuracy-bars {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 10px;
+        height: 28px;
+    }
+
+    &__accuracy-bar {
+        flex: 1;
+        border-radius: 3px;
+        min-height: 8px;
+
+        &--good {
+            background: $light-green;
+        }
+
+        &--ok {
+            background: $light-yellow;
+        }
+
+        &--bad {
+            background: $light-red;
+        }
+    }
+
+    // ── Middle Grid ────────────────────────────────────────────────────────
+    &__middle {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 16px;
+        align-items: start;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: $bp-sm) {
+            gap: 10px;
+        }
+    }
+
+    // ── Chart Card ─────────────────────────────────────────────────────────
+    &__chart-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 20px;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px;
+            }
+        }
+    }
+
+    &__chart {
+        height: 200px;
+        margin-bottom: 16px;
+
+        @media (max-width: $bp-sm) {
+            height: 150px;
+        }
+    }
+
+    // ── Forecast Grid ──────────────────────────────────────────────────────
+    &__forecast-grid {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        @media (max-width: $bp-sm) {
+            gap: 3px;
+        }
+    }
+
+    &__forecast-day {
+        flex: 1;
+        min-width: 40px;
+        border-radius: 6px;
+        padding: 6px 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        cursor: pointer;
+        transition: opacity 0.15s;
+        opacity: 0.85;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--up {
+            background: $light-green-bg;
+        }
+
+        &--down {
+            background: $light-red-bg;
+        }
+
+        &--neutral {
+            background: $light-yellow-bg;
+        }
+
+        &--today {
+            outline: 2px solid $light-text-primary;
+            opacity: 1;
+        }
+
+        @media (max-width: $bp-sm) {
+            min-width: 32px;
+            padding: 4px 2px;
+        }
+    }
+
+    &__forecast-rate {
+        font-size: 10px;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+
+        @media (max-width: $bp-sm) {
+            font-size: 9px;
+        }
+    }
+
+    &__forecast-trend {
+        font-size: 11px;
+    }
+
+    &__forecast-label {
+        font-size: 9px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+
+        @media (max-width: $bp-sm) {
+            font-size: 8px;
+        }
+    }
+
+    // ── Forecast Legend ────────────────────────────────────────────────────
+    &__forecast-legend {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+
+        @media (max-width: $bp-sm) {
+            gap: 8px;
+        }
+    }
+
+    &__legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        flex-shrink: 0;
+
+        &--up {
+            background: $light-green;
+        }
+
+        &--down {
+            background: $light-red;
+        }
+
+        &--neutral {
+            background: $light-yellow;
+        }
+
+        &--today {
+            background: $light-text-primary;
+        }
+    }
+
+    &__legend-text {
+        font-size: 11px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    // ── Recommendations ────────────────────────────────────────────────────
+    &__rec-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 20px;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px;
+            }
+        }
+    }
+
+    &__recs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__rec {
+        padding: 12px 14px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border-left: 3px solid transparent;
+
+        &--wait {
+            background: $light-green-bg;
+            border-left-color: $light-green;
+            @apply dark:bg-green-bg;
+        }
+
+        &--warning {
+            background: $light-yellow-bg;
+            border-left-color: $light-yellow;
+            @apply dark:bg-yellow-bg;
+        }
+
+        &--opportunity {
+            background: $light-blue-bg;
+            border-left-color: $blue;
+            @apply dark:bg-blue-bg;
+        }
+
+        @media (max-width: $bp-sm) {
+            padding: 10px 12px;
+        }
+    }
+
+    &__rec-title {
+        font-size: 12.5px;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__rec-message {
+        font-size: 12px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    // ── Chat Card ──────────────────────────────────────────────────────────
+    &__chat-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 20px;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px;
+            }
+        }
+    }
+
+    &__chat-messages {
+        height: 260px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-right: 4px;
+        margin-bottom: 12px;
+
+        @media (max-width: $bp-sm) {
+            height: 200px;
+            gap: 8px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $light-border;
+            border-radius: 10px;
+        }
+    }
+
+    &__chat-msg {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+
+        &--user {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__chat-avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: #fff;
+        flex-shrink: 0;
+
+        @media (max-width: $bp-sm) {
+            width: 24px;
+            height: 24px;
+            font-size: 10px;
+        }
+    }
+
+    &__chat-bubble {
+        max-width: 75%;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: $light-bg-tertiary;
+        @apply dark:bg-dark-bg-overlay;
+
+        .advisor__chat-msg--user & {
+            background: $blue;
+        }
+
+        &--typing {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 12px 16px;
+
+            span {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: $light-text-muted;
+                animation: typing 1.2s infinite;
+
+                &:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+            }
+        }
+
+        @media (max-width: $bp-sm) {
+            max-width: 85%;
+            padding: 8px 12px;
+        }
+    }
+
+    &__chat-text {
+        font-size: 13px;
+        color: $light-text-primary;
+        line-height: 1.55;
+        @apply dark:text-dark-text;
+
+        .advisor__chat-msg--user & {
+            color: #fff;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 12px;
+        }
+    }
+
+    // ── Suggestions ────────────────────────────────────────────────────────
+    &__chat-suggestions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        @media (max-width: $bp-sm) {
+            gap: 6px;
+        }
+    }
+
+    &__chat-suggestion {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 12px;
+        border-radius: 20px;
+        border: 1px solid $light-border;
+        background: $light-bg-tertiary;
+        font-size: 12px;
+        color: $light-text-secondary;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+        @apply dark:bg-dark-bg-overlay dark:border-dark-border dark:text-dark-text-secondary;
+
+        &:hover {
+            border-color: $blue;
+            color: $blue;
+            background: $light-blue-bg;
+            @apply dark:bg-blue-bg dark:text-blue-text;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 11px;
+            padding: 4px 10px;
+        }
+    }
+
+    // ── Chat Input ─────────────────────────────────────────────────────────
+    &__chat-input-row {
+        border-top: 1px solid $light-border;
+        padding-top: 12px;
+        @apply dark:border-dark-border-muted;
+    }
+
+    &__chat-input {
+        border-radius: 8px;
+        @apply dark:bg-dark-bg-overlay dark:border-dark-border dark:text-dark-text;
+    }
+
+    &__chat-send {
+        border-radius: 8px !important;
+        flex-shrink: 0;
+    }
+}
+
+// ── Typing Animation ───────────────────────────────────────────────────────
+@keyframes typing {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+
+// ── Progress Trail Dark ────────────────────────────────────────────────────
+.dark {
+    --progress-trail: #2a3147;
+}

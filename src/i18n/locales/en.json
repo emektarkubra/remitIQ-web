@@ -144,5 +144,23 @@
         "savings": "Savings",
         "status": "Status",
         "date": "Date"
+    },
+    "advisor": {
+        "rateStatus": "Rate Status",
+        "rateMiddle": "Moderate",
+        "rateDesc": "Improvement expected in 2 days.",
+        "monthlySaving": "This Month's Savings",
+        "aiOptimized": "Achieved with AI optimization",
+        "goalProgress": "Goal",
+        "modelAccuracy": "Model Accuracy",
+        "last30Days": "30-day prediction hit rate",
+        "forecastTitle": "14-Day USD/TRY Forecast",
+        "goodDay": "Good day",
+        "neutralDay": "Moderate",
+        "badDay": "Bad day",
+        "today": "Today",
+        "recommendations": "AI Recommendations",
+        "chatTitle": "AI Assistant",
+        "chatPlaceholder": "Ask about rates, timing or savings..."
     }
 }

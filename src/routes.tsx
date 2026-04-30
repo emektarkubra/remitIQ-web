@@ -2,6 +2,7 @@ import Dashboard from "./pages/dashboard"
 import Transfer from "./pages/transfer"
 import Recipients from "./pages/recipients"
 import RemitPool from "./pages/remitPool"
+import Advisor from "./pages/advisor"
 
 export const MENU_ROUTES = [
     {
@@ -31,7 +32,7 @@ export const MENU_ROUTES = [
     {
         path: "/advisor",
         title: "advisor",
-        element: <div>AI Advisor</div>,
+        element: <Advisor />,
         requiredRoles: ['default-roles-myrealm'],
     },
     {
