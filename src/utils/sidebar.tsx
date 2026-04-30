@@ -58,6 +58,14 @@ export const MENU_ELEMENTS: MenuTypes[] = [
         roles: ['default-roles-myrealm'],
     },
     {
+        key: '/transfer',
+        label: 'Transfer',
+        title: 'Transfer',
+        href: '/transfer',
+        icon: <Icon icon="mdi:shield-outline" width='16px' />,
+        roles: ['default-roles-myrealm'],
+    },
+    {
         key: '/security',
         label: 'Security',
         title: 'Security',

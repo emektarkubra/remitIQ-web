@@ -1,0 +1,664 @@
+@import '../../assets/style/variables';
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+.send-page {
+    background: $light-bg-secondary;
+    border: 1px solid $light-border;
+    // border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    @apply dark:bg-dark-bg-secondary dark:border-dark-border;
+
+    @media (max-width: $bp-sm) {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}
+
+.send {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media (max-width: $bp-sm) {
+        gap: 12px;
+    }
+
+    &__steps-wrapper {
+        background: $light-bg-tertiary;
+        border: 1px solid $light-border;
+        border-radius: 12px;
+        padding: 20px 24px;
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        @media (max-width: $bp-sm) {
+            padding: 14px 12px;
+        }
+    }
+
+    &__steps {
+        .ant-steps-item-title {
+            font-size: 13px !important;
+            @apply dark:text-dark-text-secondary;
+
+            @media (max-width: $bp-sm) {
+                display: none;
+            }
+        }
+    }
+
+    &__step-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (max-width: $bp-sm) {
+            gap: 10px;
+        }
+    }
+
+    &__ai-banner {
+        border-radius: 12px;
+        @apply dark:bg-blue-bg dark:border dark:border-blue-border;
+    }
+
+    &__ai-icon {
+        width: 34px;
+        height: 34px;
+        background: $blue;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        color: $white !important;
+    }
+
+    &__ai-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: $light-blue-text;
+        @apply dark:text-blue-text;
+    }
+
+    &__ai-message {
+        font-size: 13px;
+        color: $light-blue;
+        @apply dark:text-blue-light;
+    }
+
+    &__ai-tag {
+        display: flex;
+        font-size: 10px !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        background: $light-bg-secondary;
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        .ant-card-body {
+            padding: 20px;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px;
+            }
+        }
+
+        &-title {
+            margin: 0 0 16px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: $light-text-primary;
+            @apply dark:text-dark-text;
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__currency-row {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+
+        @media (max-width: $bp-sm) {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__currency-group {
+        flex: 1;
+    }
+
+    &__label {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        color: $light-text-secondary;
+        margin-bottom: 6px;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__currency-input {
+        display: flex;
+        border: 1.5px solid $light-border;
+        border-radius: 8px;
+        overflow: hidden;
+        background: $light-bg-secondary;
+        transition: border-color 0.15s;
+        @apply dark:bg-dark-bg-tertiary dark:border-dark-border;
+
+        &:focus-within {
+            border-color: $blue;
+        }
+    }
+
+    &__currency-select {
+        width: 90px !important;
+        flex-shrink: 0;
+
+        .ant-select-selector {
+            border: none !important;
+            border-right: 1px solid $light-border !important;
+            border-radius: 0 !important;
+            background: $light-bg-tertiary !important;
+            @apply dark:bg-dark-bg-overlay dark:border-r-dark-border !important;
+        }
+    }
+
+    &__amount-input {
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+        @apply dark:text-dark-text;
+
+        &--readonly {
+            color: $light-green !important;
+            @apply dark:text-green-text !important;
+        }
+    }
+
+    &__exchange-icon {
+        color: $light-text-muted;
+        padding-bottom: 10px;
+        flex-shrink: 0;
+        @apply dark:text-dark-text-muted;
+
+        @media (max-width: $bp-sm) {
+            transform: rotate(90deg);
+            padding-bottom: 0;
+            align-self: center;
+        }
+    }
+
+    &__rate-info {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__rate-text {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__timing-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    &__timing-option {
+        border: 1.5px solid $light-border;
+        border-radius: 8px;
+        padding: 12px 14px !important;
+        margin: 0 !important;
+        transition: border-color 0.15s;
+        @apply dark:border-dark-border;
+
+        &.ant-radio-wrapper-checked {
+            border-color: $blue;
+            background: $light-blue-bg;
+            @apply dark:bg-blue-bg dark:border-blue;
+        }
+
+        .ant-radio {
+            align-self: flex-start;
+            margin-top: 3px;
+        }
+    }
+
+    &__timing-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-align: left;
+    }
+
+    &__timing-label {
+        font-size: 13.5px;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__timing-desc {
+        font-size: 12px;
+        color: $light-text-muted;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__channel-subtitle {
+        font-size: 13px;
+        color: $light-text-secondary;
+        margin-bottom: 14px;
+        display: block;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__channels {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__channel-option {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1.5px solid $light-border;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.15s;
+        position: relative;
+        background: $light-bg-tertiary;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        padding-right: 50px;
+        @apply dark:bg-dark-bg-overlay dark:border-dark-border;
+
+        &:hover {
+            border-color: $blue;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        &--selected {
+            border-color: $blue;
+            background: $light-blue-bg;
+            @apply dark:bg-blue-bg dark:border-blue;
+        }
+
+        &--best {
+            border-color: $light-green;
+            @apply dark:border-green;
+        }
+
+        &--best#{&}--selected {
+            border-color: $blue;
+            @apply dark:border-blue;
+        }
+    }
+
+    &__channel-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+    }
+
+    &__channel-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: $light-bg-secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        color: $light-text-secondary;
+        flex-shrink: 0;
+        @apply dark:bg-dark-bg-tertiary dark:text-dark-text-secondary;
+    }
+
+    &__channel-info {
+        flex: 1;
+    }
+
+    &__channel-name {
+        font-size: 14px;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__channel-duration {
+        font-size: 12px;
+        color: $light-text-muted;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 2px;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__channel-right {
+        text-align: right;
+        flex-shrink: 0;
+    }
+
+    &__channel-receive {
+        font-size: 16px;
+        color: $light-text-primary;
+        font-variant-numeric: tabular-nums;
+        display: block;
+        @apply dark:text-dark-text;
+    }
+
+    &__channel-fee {
+        font-size: 12px;
+        color: $light-text-muted;
+        display: block;
+        margin-top: 2px;
+        @apply dark:text-dark-text-muted;
+    }
+
+    &__channel-check {
+        color: $blue;
+        font-size: 18px;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        @apply dark:text-blue-text;
+    }
+
+    &__best-tag {
+        font-size: 10px !important;
+    }
+
+    &__summary-label {
+        font-size: 13px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__summary-value {
+        font-size: 14px;
+        color: $light-text-primary;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-dark-text;
+    }
+
+    &__summary-receive {
+        font-size: 18px;
+        font-weight: 700;
+        color: $light-green;
+        font-variant-numeric: tabular-nums;
+        @apply dark:text-green-text;
+    }
+
+    &__summary-divider {
+        height: 1px;
+        background: $light-border;
+        margin: 8px 0;
+        @apply dark:bg-dark-border;
+    }
+
+    &__recipients {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__recipient-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1.5px solid $light-border;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.15s;
+        position: relative;
+        background: $light-bg-tertiary;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        @apply dark:bg-dark-bg-overlay dark:border-dark-border;
+
+        &:hover {
+            border-color: $blue;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        &--selected {
+            border-color: $blue;
+            background: $light-blue-bg;
+            @apply dark:bg-blue-bg;
+        }
+    }
+
+    &__recipient-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        flex-shrink: 0;
+
+        &--sm {
+            width: 36px;
+            height: 36px;
+            font-size: 14px;
+        }
+    }
+
+    &__recipient-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-align: left;
+    }
+
+    &__recipient-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+
+    &__recipient-bank {
+        font-size: 12px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__recipient-tag {
+        font-size: 11px !important;
+        margin-top: 4px;
+        width: fit-content;
+        @apply dark:border-dark-border dark:text-dark-text-secondary;
+    }
+
+    &__recipient-check {
+        color: $blue;
+        font-size: 18px;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        @apply dark:text-blue-text;
+    }
+
+    &__confirm-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: $light-text-muted;
+            @apply dark:text-dark-text-muted;
+        }
+    }
+
+    &__confirm-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        border-bottom: 1px solid $light-border;
+        @apply dark:border-dark-border-muted;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__confirm-label {
+        font-size: 13px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    &__confirm-value {
+        font-size: 13.5px;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+
+        &--green {
+            font-size: 16px;
+            color: $light-green;
+            @apply dark:text-green-text;
+        }
+    }
+
+    &__confirm-divider {
+        height: 1px;
+        background: $light-border;
+        margin: 14px 0;
+        @apply dark:bg-dark-border;
+    }
+
+    &__confirm-recipient {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__confirm-warning {
+        font-size: 12.5px;
+    }
+
+    &__warning-banner {
+        border-radius: 10px;
+    }
+
+    &__next-btn {
+        min-width: 140px;
+
+        &:hover {
+            background: $blue-hover !important;
+            border-color: $blue-hover !important;
+        }
+
+
+        @media (max-width: $bp-sm) {
+            min-width: 120px;
+        }
+    }
+
+    &__submit-btn {
+        min-width: 200px;
+        background: $blue !important;
+        border-color: $blue !important;
+
+        &:hover {
+            background: $blue-hover !important;
+            border-color: $blue-hover !important;
+        }
+
+        @media (max-width: $bp-sm) {
+            min-width: 160px;
+            font-size: 13px;
+        }
+    }
+
+    &__success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        gap: 16px;
+        text-align: center;
+    }
+
+    &__success-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: $light-green-bg;
+        border: 3px solid $light-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: $light-green;
+        @apply dark:bg-green-bg dark:border-green dark:text-green;
+    }
+
+    &__success-title {
+        color: $light-text-primary;
+        margin: 0 !important;
+        @apply dark:text-dark-text;
+    }
+
+    &__success-desc {
+        font-size: 14px;
+        color: $light-text-secondary;
+        @apply dark:text-dark-text-secondary;
+    }
+
+    .ant-alert-content {
+        text-align: left;
+    }
+
+    .ant-alert-message {
+        margin: 0;
+    }
+
+    .ant-statistic-content-value {
+        color: $light-text-primary;
+        @apply dark:text-dark-text;
+    }
+}
