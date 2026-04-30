@@ -184,5 +184,23 @@
         "fee": "Ücret",
         "savings": "Tasarruf",
         "status": "Durum"
+    },
+    "analytics": {
+        "title": "Analitik",
+        "subtitle": "Harcama ve tasarruf analizi",
+        "1month": "1 Ay",
+        "3months": "3 Ay",
+        "6months": "6 Ay",
+        "1year": "1 Yıl",
+        "totalSent": "Toplam Gönderim",
+        "totalSavings": "Toplam Tasarruf",
+        "avgRate": "Ort. Kur",
+        "totalFees": "Toplam Ücret",
+        "vsLastPeriod": "önceki döneme göre",
+        "monthlySent": "Aylık Transfer Hacmi",
+        "byRecipient": "Alıcıya Göre",
+        "rateTrend": "Kur Trendi",
+        "monthlySavings": "Aylık AI Tasarrufu",
+        "channelBreakdown": "Kanal Dağılımı"
     }
 }
