@@ -1,0 +1,392 @@
+@import '../../assets/style/variables';
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+.analytics-page {
+    background: $light-bg-secondary;
+    border: 1px solid $light-border;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+    .dark & {
+        background: $bg-secondary;
+        border-color: $border;
+    }
+
+    @media (max-width: $bp-md) {
+        padding: 20px;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 14px;
+        border-radius: 12px;
+    }
+}
+
+.analytics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+
+    @media (max-width: $bp-sm) {
+        gap: 12px;
+    }
+
+    // ── Header ─────────────────────────────────────────────────────────────
+    &__title {
+        margin: 0 !important;
+        color: $light-text-primary;
+
+        .dark & {
+            color: $text-primary;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 16px !important;
+        }
+    }
+
+    &__subtitle {
+        font-size: 13px;
+        color: $light-text-muted;
+
+        .dark & {
+            color: $text-muted;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__period-select {
+        width: 140px;
+
+        @media (max-width: $bp-sm) {
+            width: 120px;
+        }
+    }
+
+    // ── KPI Cards ──────────────────────────────────────────────────────────
+    &__kpis {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        @media (max-width: $bp-sm) {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+    }
+
+    &__kpi-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        min-width: 0;
+
+        .dark & {
+            background: $bg-tertiary;
+            border-color: $border;
+        }
+
+        .ant-card-body {
+            padding: 16px 18px;
+
+            @media (max-width: $bp-md) {
+                padding: 14px 16px;
+            }
+
+            @media (max-width: $bp-sm) {
+                padding: 12px;
+            }
+        }
+    }
+
+    &__kpi-label {
+        font-size: 12px;
+        color: $light-text-secondary;
+        display: block;
+        margin-bottom: 4px;
+
+        .dark & {
+            color: $text-secondary;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 11px;
+        }
+    }
+
+    &__kpi-value {
+        font-size: 24px;
+        font-weight: 700;
+        color: $light-text-primary;
+        font-variant-numeric: tabular-nums;
+        display: block;
+        margin-bottom: 6px;
+
+        .dark & {
+            color: $text-primary;
+        }
+
+        @media (max-width: $bp-md) {
+            font-size: 20px;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 17px;
+        }
+    }
+
+    &__kpi-change {
+        flex-wrap: nowrap;
+    }
+
+    &__kpi-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: $light-bg-tertiary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $blue;
+        flex-shrink: 0;
+
+        .dark & {
+            background: $bg-overlay;
+            color: $blue-text;
+        }
+
+        @media (max-width: $bp-sm) {
+            display: none;
+        }
+    }
+
+    &__change-icon {
+        &--up {
+            color: $light-green;
+        }
+
+        &--down {
+            color: $light-red;
+        }
+    }
+
+    &__change-text {
+        font-size: 11px;
+        white-space: nowrap;
+
+        &--up {
+            color: $light-green;
+
+            .dark & {
+                color: $green-text;
+            }
+        }
+
+        &--down {
+            color: $light-red;
+
+            .dark & {
+                color: $red-text;
+            }
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 10px;
+        }
+    }
+
+    // ── Charts Row ─────────────────────────────────────────────────────────
+    &__charts-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+        min-width: 0;
+
+        @media (max-width: $bp-lg) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: $bp-sm) {
+            gap: 10px;
+        }
+    }
+
+    &__chart-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        min-width: 0;
+
+        .dark & {
+            background: $bg-tertiary;
+            border-color: $border;
+        }
+
+        .ant-card-body {
+            padding: 20px;
+            overflow: hidden;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px;
+            }
+        }
+    }
+
+    &__chart-header {
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__card-title {
+        margin: 0 !important;
+        font-size: 14px !important;
+        color: $light-text-primary;
+
+        .dark & {
+            color: $text-primary;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 13px !important;
+        }
+    }
+
+    &__chart {
+        height: 220px;
+        width: 100%;
+        min-width: 0;
+
+        @media (max-width: $bp-md) {
+            height: 190px;
+        }
+
+        @media (max-width: $bp-sm) {
+            height: 160px;
+        }
+    }
+
+    // ── Breakdown Card ─────────────────────────────────────────────────────
+    &__breakdown-card {
+        border-radius: 12px;
+        border: 1px solid $light-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+        .dark & {
+            background: $bg-tertiary;
+            border-color: $border;
+        }
+
+        .ant-card-body {
+            padding: 20px;
+
+            @media (max-width: $bp-sm) {
+                padding: 14px;
+            }
+        }
+    }
+
+    &__breakdown-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (max-width: $bp-sm) {
+            gap: 12px;
+        }
+    }
+
+    &__breakdown-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__breakdown-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__breakdown-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    &__breakdown-name {
+        font-size: 13.5px;
+        color: $light-text-primary;
+
+        .dark & {
+            color: $text-primary;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 13px;
+        }
+    }
+
+    &__breakdown-amount {
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        color: $light-text-secondary;
+
+        .dark & {
+            color: $text-secondary;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__breakdown-percent {
+        font-size: 13px;
+        font-weight: 600;
+        color: $light-text-primary;
+        min-width: 36px;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+
+        .dark & {
+            color: $text-primary;
+        }
+
+        @media (max-width: $bp-sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__breakdown-bar-bg {
+        height: 6px;
+        background: $light-bg-tertiary;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .dark & {
+            background: $bg-overlay;
+        }
+    }
+
+    &__breakdown-bar-fill {
+        height: 100%;
+        border-radius: 20px;
+        transition: width 0.6s ease;
+    }
+}

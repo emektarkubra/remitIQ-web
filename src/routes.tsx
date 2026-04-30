@@ -4,6 +4,7 @@ import Recipients from "./pages/recipients"
 import RemitPool from "./pages/remitPool"
 import Advisor from "./pages/advisor"
 import History from "./pages/transferHistory"
+import Analytics from "./pages/analytics"
 
 export const MENU_ROUTES = [
     {
@@ -45,7 +46,7 @@ export const MENU_ROUTES = [
     {
         path: "/analytics",
         title: "analytics",
-        element: <div>Analytics</div>,
+        element: <Analytics />,
         requiredRoles: ['default-roles-myrealm'],
     },
     {

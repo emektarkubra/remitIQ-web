@@ -184,5 +184,23 @@
         "fee": "Fee",
         "savings": "Savings",
         "status": "Status"
+    },
+    "analytics": {
+        "title": "Analytics",
+        "subtitle": "Spending and savings analysis",
+        "1month": "1 Month",
+        "3months": "3 Months",
+        "6months": "6 Months",
+        "1year": "1 Year",
+        "totalSent": "Total Sent",
+        "totalSavings": "Total Savings",
+        "avgRate": "Avg. Rate",
+        "totalFees": "Total Fees",
+        "vsLastPeriod": "vs last period",
+        "monthlySent": "Monthly Transfer Volume",
+        "byRecipient": "By Recipient",
+        "rateTrend": "Exchange Rate Trend",
+        "monthlySavings": "Monthly AI Savings",
+        "channelBreakdown": "Channel Breakdown"
     }
 }
